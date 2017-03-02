@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         //end for
 
         //create listview
-        MyAdapter myAdapter = new MyAdapter(MainActivity.this,ints,titleStrings,detailStrings);
+        MyAdapter myAdapter = new MyAdapter(MainActivity.this,ints,titleStrings,shortStrings);
         listView.setAdapter(myAdapter);
     }//main method
 
