@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.traffic_15, R.drawable.traffic_16, R.drawable.traffic_17, R.drawable.traffic_18, R.drawable.traffic_19,
             R.drawable.traffic_20,};
 
-    private String[] titleStrings, detailStrings;
+    private String[] titleStrings, detailStrings, shortStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //intail view
         listView = (ListView) findViewById(R.id.livTraffic);
+
         //get value
         titleStrings = getResources().getStringArray(R.array.title);
         detailStrings = getResources().getStringArray(R.array.detail);
+        //subString detailString ทำ30 char
+        shortStrings = new String[detailStrings.length];
+       for (int i=0;i<detailStrings.length; i++){
+           shortStrings[i] = detailStrings[i].substring(0,29) + "...";
+        }
+        //end for
+
         //create listview
         MyAdapter myAdapter = new MyAdapter(MainActivity.this,ints,titleStrings,detailStrings);
         listView.setAdapter(myAdapter);
