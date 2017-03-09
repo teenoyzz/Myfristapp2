@@ -17,24 +17,40 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="@string/MoreInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnMoreinfo"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentStart="false"
-        android:onClick="onClickMoreInfo"/>
-
     <ListView
+        android:id="@+id/livTraffic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/btnMoreinfo"
+        android:layout_above="@+id/layButton"
         android:layout_below="@+id/textView"
-        android:id="@+id/livTraffic"
-        android:background="#c3ffffff"
-        android:layout_margin="@dimen/my_margin" />
+        android:layout_margin="@dimen/my_margin"
+        android:background="#c3ffffff" />
+
+    <LinearLayout
+        android:id="@+id/layButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMoreinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_weight="1"
+            android:onClick="onClickMoreInfo"
+            android:text="@string/MoreInfo" />
+
+        <Button
+            android:id="@+id/btnAboutMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aboutme" />
+    </LinearLayout>
 
 
 </RelativeLayout>

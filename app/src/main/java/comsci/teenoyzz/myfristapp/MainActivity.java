@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }//main method
-
     public void onClickMoreInfo(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("https://www.dlt.go.th/th/dlt-knowledge/view.php?_did=111"));
